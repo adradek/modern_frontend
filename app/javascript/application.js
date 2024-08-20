@@ -6,6 +6,5 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit https://pragprog.com/titles/nrclient2 for more book information.
 ***/
-// Entry point for the build script in your package.json
 import "@hotwired/turbo-rails"
 import "./controllers"
