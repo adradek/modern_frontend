@@ -13,13 +13,15 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "plugin:cypress/recommended",
   ],
-  parser: "@babel/eslint-parser",
+  parser: "@typescript/eslint-parser",
   parserOptions: {
     ecmaVersion: 12,
-    parser: "@babel/eslint-parser",
+    parser: "@typescript/eslint-parser",
     requireConfigFile: false,
     sourceType: "module",
   },
@@ -30,4 +32,4 @@ module.exports = {
     process: true,
     module: true,
   },
-}
+};
