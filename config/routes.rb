@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :concerts
   resources :bands
   resources :venues
+  resource  :favorites_count, only: [:show], controller: 'favorites_count'
   devise_for :users
   root to: "schedules#show"
 end
