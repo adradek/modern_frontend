@@ -17,6 +17,12 @@ Rails.application.routes.draw do
   resources :bands
   resources :venues
   resource  :favorites_count, only: [:show], controller: 'favorites_count'
+
+  namespace :css_test do
+    get :flexbox, to: 'flexbox'
+    get :grid, to: 'grid'
+  end
+
   devise_for :users
   root to: "schedules#show"
 end
