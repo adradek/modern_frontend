@@ -10,12 +10,15 @@
     "@tailwindcss/typography": "^0.5.2",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
+    "@types/styled-components": "^5.1.25",
+    "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.4",
     "esbuild": "^0.14.36",
     "form-request-submit-polyfill": "^2.0.0",
     "postcss": "^8.4.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "styled-components": "^5.3.5",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
@@ -25,6 +28,7 @@
     "@babel/preset-env": "^7.16.11",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "babel-plugin-styled-components": "^2.0.7",
     "cypress": "9.5.4",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
@@ -37,7 +41,7 @@
   },
   "scripts": {
     "build:js": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/tailwind.css",
     "failure:js": "rm ./app/assets/builds/application.js && rm ./app/assets/builds/application.js.map",
     "dev": "tsc-watch --noClear -p tsconfig.json --onSuccess \"yarn build:js\" --onFailure \"yarn failure:js\""
   }
